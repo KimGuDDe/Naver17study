@@ -1,0 +1,20 @@
+package day1211;
+
+public class Ex7DataType {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name="Candy";
+		int age = 32;
+		float height= 163.8f;
+		double weight=56.7;
+		char blood = 'B';
+	
+		System.out.printf("이름"+ ":" + "%s님\n",name+);
+		System.out.printf("나이"+":"+"%d세\n",age);
+		System.out.printf("키"+":"+"%3.1fcm\n",height);
+		System.out.printf("몸무게"+":"+"%2.1fkg\n",weight);
+		System.out.printf("혈액형"+":"+(char)blood);
+	}
+
+}

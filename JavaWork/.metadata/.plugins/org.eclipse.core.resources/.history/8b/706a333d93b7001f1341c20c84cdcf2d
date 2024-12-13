@@ -1,0 +1,10 @@
+package day1211;
+
+public class Ex10Arguments {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("double 형 arguments 값 읽기");
+	}
+
+}
