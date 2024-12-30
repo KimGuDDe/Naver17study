@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A807107-7B05-6A4B-CD61-2910504CFE91" schemaObject="044B4834-39B0-1700-9C46-4147E731B3E4" name="EMP">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>F0823298-9BDC-C125-3ECA-9136E7B70444</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D52E74F1-B809-93FB-B10C-0E8841489ED3" name="PK_EMP">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>CC070E32-2869-3C6D-C411-CA0BC855EC58</importedID>
+<pk>true</pk>
+<indexExpression>EMPNO</indexExpression>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="A7AF97AA-7394-2FE8-A57D-11B16A72DFE4" schemaObject="044B4834-39B0-1700-9C46-4147E731B3E4" name="PK_EMP">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>9C292001-98C4-74C6-8441-3C5E886CC40C</importedID>
+<indexExpression>EMPNO</indexExpression>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="CD1F0C72-FDC5-ED5E-3FE1-79B267A3AD2D" name="FK_DEPTNO">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

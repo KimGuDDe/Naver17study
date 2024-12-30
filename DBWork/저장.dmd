@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="저장" id="E17867F4-19A9-8692-60BE-91E02E56F8F7" version="3.5">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:21 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E17867F4-19A9-8692-60BE-91E02E56F8F7</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7420431E-FF5E-86E2-264F-C98CE62DEA95">
+<designStoragePath>D:\</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMP" directorySegmentName="seg_0" id="3A807107-7B05-6A4B-CD61-2910504CFE91">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<schemaObject>044B4834-39B0-1700-9C46-4147E731B3E4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C1326046-0828-9803-8440-8907154E1EA3</segment>
+<tableSpace>585BCCD6-4051-3AC7-515B-6F3AC42F5F71</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_EMP" id="A7AF97AA-7394-2FE8-A57D-11B16A72DFE4">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<schemaObject>044B4834-39B0-1700-9C46-4147E731B3E4</schemaObject>
+<segment>F1A2BC91-DD33-6240-7735-E23061F132AE</segment>
+<tableSpace>585BCCD6-4051-3AC7-515B-6F3AC42F5F71</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_DEPTNO" id="CD1F0C72-FDC5-ED5E-3FE1-79B267A3AD2D">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_EMP" id="D52E74F1-B809-93FB-B10C-0E8841489ED3">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<segment>F1A2BC91-DD33-6240-7735-E23061F132AE</segment>
+<tableSpace>585BCCD6-4051-3AC7-515B-6F3AC42F5F71</tableSpace>
+<existingIndex>A7AF97AA-7394-2FE8-A57D-11B16A72DFE4</existingIndex>
+<indexSegment>F1A2BC91-DD33-6240-7735-E23061F132AE</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

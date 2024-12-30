@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D87ED84-DA6C-4CA1-5BDC-D3F1307BC198" schemaObject="044B4834-39B0-1700-9C46-4147E731B3E4" name="DEPT">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>3F49E8DF-2701-99F5-0F22-7D4C655BE24B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="347F2548-DBF6-DADC-FFD5-07AED1B2517B" name="PK_DEPT">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>627180B7-DA3D-3B20-A4F8-15B983D66500</importedID>
+<pk>true</pk>
+<indexExpression>DEPTNO</indexExpression>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="116A9EAD-42FE-F02B-9938-A3B6BF275C56" schemaObject="044B4834-39B0-1700-9C46-4147E731B3E4" name="PK_DEPT">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>E83B51BF-CF3E-FB54-DA4C-8282CA4A090B</importedID>
+<indexExpression>DEPTNO</indexExpression>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="A6390B27-4B21-DC9B-9208-3F679FADA4F9" mainViewID="FB4FD637-52F2-FFB2-9B45-0FAB5AE3DEC9">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:21 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

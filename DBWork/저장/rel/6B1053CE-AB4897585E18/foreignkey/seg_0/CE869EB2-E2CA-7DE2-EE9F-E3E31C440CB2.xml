@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE869EB2-E2CA-7DE2-EE9F-E3E31C440CB2" containerWithKeyObject="3A807107-7B05-6A4B-CD61-2910504CFE91" localFKIndex="CD1F0C72-FDC5-ED5E-3FE1-79B267A3AD2D" name="FK_DEPTNO">
+<createdBy>bitcamp</createdBy>
+<createdTime>2024-12-30 02:13:32 UTC</createdTime>
+<ownerDesignName>저장</ownerDesignName>
+<importedID>72B6B7FB-7AC8-EE94-2CD1-C3ABA9B6B881</importedID>
+<referredTableLongName>SCOTT.DEPT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1D87ED84-DA6C-4CA1-5BDC-D3F1307BC198</referredTableID>
+<keyObject>347F2548-DBF6-DADC-FFD5-07AED1B2517B</keyObject>
+<referredKeyID>347F2548-DBF6-DADC-FFD5-07AED1B2517B</referredKeyID>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
