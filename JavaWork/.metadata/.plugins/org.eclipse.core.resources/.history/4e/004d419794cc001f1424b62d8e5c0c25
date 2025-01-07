@@ -1,0 +1,31 @@
+package Day0107db;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class Ex1FoodMysqlDb extends JFrame{
+	FoodModel foodModel = new FoodModel();
+	DefaultTableModel foodResTableModel;
+	DefaultTableModel foodOrderTableModel;
+	JTable foodResTable;
+	JTable foodOrderTable;
+	
+	JButton btnFoodResAdd,btnFoodResDel;
+	JButton btnFoodOrderAdd,btnFoodOrderDel;
+	JTextField tfFoodNum,tfOrderName,tfOrderCnt,tfBookingDay;
+	
+	public Ex1FoodMysqlDb() {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex1FoodMysqlDb ex1 = new Ex1FoodMysqlDb();
+	}
+
+}

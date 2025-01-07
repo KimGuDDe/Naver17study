@@ -1,0 +1,53 @@
+package Day1223;
+public class ReviewBook317 {
+public class HankookTire extends ReviewBook317
+{
+	@Override
+	public void roll() {
+		System.out.println("한국 타이어가 회전합니다");
+		// TODO Auto-generated method stub
+		super.roll();
+	}
+}
+
+public class kumhoTire extends ReviewBook317
+{
+	@Override
+	public void roll() {
+		System.out.println("금호 타이어가 회전합니다");
+		
+		super.roll();
+	}
+}
+
+ public class Car{
+	 
+	 public ReviewBook317 tire;
+	 
+	 public void run()
+	 {
+		 tire.roll();
+	 }
+ } 
+
+	public void roll() {
+		System.out.println("회전합니다");
+	}
+	
+	 public class CarExample {
+		 public static void main(String[] args) {
+			 
+			 Car myCar = new Car()			 
+			 myCar.tire = new ReviewBook317();
+			 myCar.run();
+			 myCar.tire = new HankookTire();
+			 myCar.run();
+			 
+			 myCar.tire = new kumhoTire();
+			 myCar.run();
+			 
+		 }
+	 }
+	 
+	 
+}

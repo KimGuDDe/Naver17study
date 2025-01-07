@@ -1,0 +1,12 @@
+package db.connect;
+
+public class MysqlConnect {
+	static final String MYSQL_DRIVER="com.mysql.cj.jdbc.Driver";
+	String url = "jdbc:mysql://localhost:3306/study502?serverTimezone=Asia/Seoul";
+	String username = "root";
+	String password = "1234";
+	
+	
+	
+	
+}

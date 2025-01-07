@@ -26,10 +26,12 @@ public class Ex10For {
 		
 		System.out.println();
 		System.out.println("continue");
-		for(int i=0;i<=10;i++) {
+		for(int i=0;i<=10;i++) 
+		{
 			if(i%2==1)
 				continue;//i++로 이동
-			System.out.println(i+" ");
+			System.out.print
+			(i+" ");
 		}
 		
 		

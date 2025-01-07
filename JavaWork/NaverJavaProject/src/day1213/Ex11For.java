@@ -1,5 +1,7 @@
 package day1213;
 
+import java.util.Scanner;
+
 public class Ex11For {
 
 	public static void main(String[] args) {
@@ -19,6 +21,10 @@ public class Ex11For {
 		for(char ch='Z';ch>='A';ch--)
 			System.out.print(ch);
 		System.out.println();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
 			
 		
 		
