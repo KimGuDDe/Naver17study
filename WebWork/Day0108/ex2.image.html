@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.two>img{
+            width: 100px;
+            height: 125px;
+            border-style: groove;
+            border-width: 5px;
+            border-color: hotpink;
+        }
+
+        div.three>img{
+            width: 100px;
+            height: 100px;
+            border: solid 2px gray;
+            border-radius: 100px; /*모서리 각도*/
+        }
+
+        div.one>img{
+            border-radius: 10px 20px 30px 40px;/*각도 다 다르게 깎을 수 있다*/
+        }
+
+        #twoloc{
+            position: absolute;
+            left: 400px;
+            top: 100px;
+            border: solid 2px gray;
+            width: 300px;
+            height: 150px;
+            text-align: center; /*수평방향의 가운데*/
+            padding-top: 20px; /*상단의 안쪽여백지정*/
+        }
+
+        div.three>h3{
+            width: 300px;
+            text-align:  center;
+            border: inset 4px gold;
+            text-shadow: 3px 3px 3px gray; /*글자그림자자*/
+        }
+
+        div.three{
+            border: solid 5px red;
+            width: 400px;
+            box-shadow: 5px 5px 5px lime; /*해당 요소 그림자*/
+            /*브라우저 크기 변경해도 right 50px bottom 50px만큼 고정시키는 코드 : position*/
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>imag tag 연습</h2>
+    <div class="one">
+        <img alt="박보영" src="../Photo/12.jpg"
+        title="박보영입니다" width="100"
+        border="5" hspace="20" vspace="20">
+        하늘은 맑고 바람이 좋습니다<br>
+        오늘 점심은 뭐 먹을까요?
+    </div>
+    <div class="two" id="twoloc">
+        <img alt="수지" src="../Photo/19.jpg">
+        <img alt="박신혜" src="../Photo/13.jpg">
+    </div>
+    <div class="three">
+        <h3>shop 제품들</h3>
+        <img alt="" src="../photo2/14.jpg" title="신발들">
+        <img alt="" src="../photo2/30.jpg" title="머리띠"
+    </div>
+</body>
+</html>

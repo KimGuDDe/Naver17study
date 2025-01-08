@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table.tb{
+            width  : 300px;
+            border-collapse: collapse;
+            border: inset 3px green;
+        }
+
+        table.tb>thead>tr{
+            height: 40px;
+            background-color: yellow;
+            color: blue;
+            
+        }
+
+        table.tb>thead>tr>th{
+            border: dotted 1px gray;
+            border-bottom: double 4px red;
+
+        }
+
+        table.tb>tbody>tr>td{
+            border: solid 1px gray;
+            background-color: lightcyan;
+            text-align: center;
+        }
+        
+        table.tb2>thead>tr>td{
+            font-size: 30px;
+            background-color: orange;
+            width: 600px;
+            height: 70px;
+            border-collapse: collapse;
+            border: inset 3px gray;
+            text-align: center;
+        }
+        table.tb3>tr{
+            width  : 300px;
+            border-collapse: collapse;
+            border: inset 3px black;
+        }
+    </style>
+</head>
+<body>
+    <table class="tb">
+        <thead>
+            <tr>
+                <th>이름</th><th>나이</th><th>혈액형</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김길동</td><td>23세</td><td>A형</td>
+            </tr>
+            <tr>
+                <td>김길동</td><td>23세</td><td>A형</td>
+            </tr>
+            <tr>
+                <td>김길동</td><td>23세</td><td>A형</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr color="lime" width="500" align="left" size="5">
+    <table class="tb2">
+        <thead>
+            <tr>
+                <td>이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;서</td>
+       </tr>
+        </thead>
+       
+    <table class="tb3">
+        <tr>
+            <td width="100">지원구분</td>
+            <td width="150">신입( )/경력( )</td>
+            <td width="100">지원부문</td>
+            <td width="100">희망연봉</td>
+            <td width="100">만원</td>
+        </tr>
+    </table>
+    <div class="three">
+        <table>
+            <tr>
+                <td rowspan="5" align="center">
+                    사진
+                </td>
+                <td>성명</td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+            </tr>
+            <tr>
+                <td>현주소</td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+            </tr>
+        </table>
+        <table>
+            
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        div.figure figure{
+            float: left;
+            width: 110px;
+        }
+        div.figure>figure>figcaption{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<marquee>Have a <mark>Nice</mark> day!</marquee>
+<!--behavior : 기본은 scroll 이외 slide,alternate-->
+<marquee width="400" behavior="slide">다들 안녕하세요요오오</marquee>
+<!--diredtion : 기본값 left-->
+<marquee width="400" behavior="alternate" direction="right">다들 잘가요오오오오오오</marquee>
+    <div>
+        <a href="http://www.naver.com">
+        <img src="../Photo/K-052.png"><b>Naver</b>
+        </a>
+    </div>
+    <div>
+        <a href="http://www.nate.com">
+            <figure>
+                <img src="../Photo/K-041.png">
+                <figcaption style="padding-left: 30px;">
+                    <b>Nate</b>
+                </figcaption>
+            </figure>
+        </a>
+        <a href="../Photo/K-049.png">
+            <figure>
+                <img src="../Photo/K-049.png">
+                <figcaption>
+                    <b>예쁜 유리잔</b>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+    <hr>
+    <div class="figure">
+        <marquee>
+        <figure>
+            <img src="../Photo/17.jpg">
+            <figcaption>
+                <b>신민아아</b>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../Photo/18.jpg">
+            <figcaption>
+                <b>신세경</b>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../Photo/15.jpg">
+            <figcaption>
+                <b>설현현</b>
+            </figcaption>
+        </figure>
+    </marquee>
+    </div>
+</body>
+</html>
