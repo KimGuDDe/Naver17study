@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 400px;
+            border: 5px groove gray;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML5 FormTag 들들</h2>
+    <table>
+        <tr>
+            <th width="100">text</th>
+            <td>
+                <input type="text" value="Hello">
+            </td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>
+                <input type="password" value="12345">
+            </td>
+        </tr>
+        <tr>
+            <th>checkbox</th>
+            <td>
+                <label><input type="checkbox">운전면허</label>
+                &nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" checked>운전면허</label>
+            </td>
+        </tr>
+        <tr>
+            <th>Radio</th>
+            <td>
+                <!--같은 그룹으로 묶을 경우 반드시 name 이 같아야 한다다-->
+                <label>
+                    <input type="radio" value="men" name="gender" checked>남자
+                </label>
+                <label>
+                    <input type="radio" value="women" name="gender">여자
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td>
+                <input type="number" value="10" min="5" max="30" step="2">
+            </td>
+        </tr>
+        <tr>
+            <th>color</th>
+            <td>
+                <input type="color" value="#ccffff">
+            </td>
+        </tr>
+        <tr>
+            <th>date</th>
+            <td>
+                <input type="date" value="2025-01-09">
+                &nbsp;
+                <input type="datetime-local" value="2025-01-09 14:15">
+            </td>
+        </tr>
+        <tr>
+            <th>button</th>
+            <td>
+                <input type="button" value="ok">
+                &nbsp;&nbsp;
+                <button type="button">Cancel</button>
+            </td>
+        </tr>
+        <tr>
+            <th>submit(폼단위전송)</th>
+            <td>
+                <input type="submit" value="전송">
+                &nbsp;
+                <button type="submit">전송 </button>
+                &nbsp;
+                <input type="image" src="../Mycar/mycar12.png" width="100" height="50">
+            </td>
+        </tr>
+        <tr>
+            <th>select</th>
+            <td>
+                <select>
+                    <option>java</option>
+                    <option selected>html5</option>
+                    <option>javascript</option>
+                    <option>springboot</option>
+                    <option>oracle</option>
+                </select>
+                &nbsp;
+                <select>
+                    <option selected disabled hidden>도시선택</option>
+                    <option>서울</option>
+                    <option>성남시</option>
+                    <option>용인시</option>
+                    <option>제주도</option>
+                    <option>부산</option>
+                </select>
+                &nbsp;
+                <select size="3">
+                    <option>Java</option>
+                    <option>Mysql</option>
+                    <option>springboot</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>progress</th>
+            <td>
+                <progress value="50" max="100"></progress>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
