@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>로또 번호 생성기</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gaegu&family=Jua&family=Nanum+Pen+Script&family=Playwrite+AU+SA:wght@100..400&family=Single+Day&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            window.onload = function () {
+                let lotto = document.querySelectorAll(".mylotto>.lotto");
+                lotto[1].style.backgroundColor = "purple";
+                lotto[2].style.backgroundColor = "orange";
+                lotto[3].style.backgroundColor = "red";
+                lotto[4].style.backgroundColor = "pink";
+                lotto[5].style.backgroundColor = "#db7093";
+                lotto[5].style.color = "black";
+
+                document.querySelector("#btnlotto").onclick = function () {
+                    // 6개 크기의 배열 선언
+                    let num = new Array(6);
+
+                    // 배열에 중복되지 않은 1~45의 난수 구함
+                    for (let i = 0; i < 6; i++) {
+                        let r;
+                        let d = true;
+
+                        // 중복되지 않도록 난수 생성
+                        while (d) {
+                            r = Math.floor(Math.random() * 45) + 1;
+                            d = false;
+
+                            // 중복 확인
+                            for (let j = 0; j < num.length; j++) {
+                                if (num[j] === r) {
+                                    d = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        // 중복이 없으면 배열에 추가
+                        num[i] = r;
+                    }
+
+                    // 오름차순 정렬
+                    for (let i = 0; i < num.length - 1; i++) {
+                        for (let j = i + 1; j < num.length; j++) {
+                            if (num[i] > num[j]) {
+                                // 자리 바꾸기 (오름차순 정렬)
+                                let temp = num[i];
+                                num[i] = num[j];
+                                num[j] = temp;
+                            }
+                        }
+                    }
+
+                    // 로또 번호를 각 div에 표시
+                    for (let i = 0; i < num.length; i++) {
+                        lotto[i].textContent = num[i];
+                    }
+                }
+            }
+        </script>
+        <style>
+            body * {
+                font-family: 'Jua';
+            }
+
+            .mylotto {
+                margin: 20px 100px;
+                border: 5px solid gray;
+                border-radius: 30px;
+                padding: 17px 22px;
+                width: 520px;
+                height: 100px;
+            }
+
+            .mylotto>.lotto {
+                float: left;
+                width: 60px;
+                height: 58px;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 100px;
+                border: 1px solid black;
+                margin-right: 15px;
+                font-size: 25px;
+                background-color: palegreen;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="margin: 30px 100px;" class="mydate">
+            <h5><b style="color: red;">1234</b>회 로또</h5>
+            <script>
+                let date = new Date();
+                document.write(`<h6>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</h6>`);
+            </script>
+        </div>
+
+        <div class="mylotto">
+            <div class="lotto">1</div>
+            <div class="lotto">1</div>
+            <div class="lotto">1</div>
+            <div class="lotto">1</div>
+            <div class="lotto">1</div>
+            <div class="lotto">1</div>
+        </div>
+
+        <button type="button" class="btn btn-success" id="btnlotto" style="margin: 20px 200px">로또 숫자 구하기</button>
+     
+    </body>
+</html

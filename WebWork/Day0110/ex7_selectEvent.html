@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gaegu&family=Jua&family=Nanum+Pen+Script&family=Playwrite+AU+SA:wght@100..400&family=Single+Day&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            body *{
+                font-family: 'jua';
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="margin : 30px;">
+            <select onchange="alert(this.value)">
+                <option selected disabled hidden>선택하세요</option>
+                <option>네이버</option>
+                <option>네이트</option>
+                <option>구글</option>
+            </select>
+            <hr>
+            <select onchange="alert(this.value)">
+                <option selected disabled hidden>선택하세요</option>
+                <option value="http://www.naver.com">네이버</option>
+                <option value="http://www.nate.com">네이트</option>
+                <option value="http://www.google.com">구글</option>
+            </select>
+            <hr>
+            <select id="mySel">
+                <option selected disabled hidden>선택하세요</option>
+                <option value="http://www.naver.com">네이버</option>
+                <option value="http://www.nate.com">네이트</option>
+                <option value="http://www.google.com">구글</option>
+            </select>
+        </div>        
+        <script>
+            document.getElementById('mySel').onchange=function(){
+                //this 는 자기 자신 인스턴스 값이다
+                let url=this.value;
+                //alert(url);
+                location.href=url;//해당 url 페이지로 이동
+            }
+        </script>
+        <hr>
+        <div class="photoChange">
+            <select class="myPhotoSel">
+                <option selected disabled hidden>사진 선택하세요</option>
+                <option value="../mycar/mycar11.png">노랑색폭스바겐</option>
+                <option value="../mycar/mycar13.png">핑크색폭스바겐</option>
+                <option value="../Photo/k-041.png">오늘 브런치</option>
+                <option value="../Photo/k-052.png">내가좋아하는컵</option>
+            </select>
+        </div>
+        <div class="myphoto" style="margin-top: 20px;">
+            <!--src에서 사진이 발견되지 않았을 경우 임시이미지로 대체한다-->
+            <img src="" width="300" onerror="this.src='../Photo/k-060.png'">
+            <br><br>
+            <h2>현재이미지는 임시이미지입니다</h2>
+        </div>
+        <script>
+            //select 이벤트
+            document.querySelector("div.photoChange>.myPhotoSel").onchange=function(){
+                //alert(this.value);
+                //select 의 value가 존재할 경우 text를 따로 얻으려면
+                let text = this.options[this.selectedIndex].label;
+                //alert(text);
+                //img 요소값 변수 myphoto에서 얻는
+                let myphoto=document.querySelector("div.myphoto>img");
+                //this.value 를 myphoto 의 src에 적용
+                myphoto.setAttribute("src",this.value);
+                //h2의 요소값
+                let msg=document.querySelector("div.myphoto>h2");
+                //innerText : text만 가능 ,html 코드 적용X
+                //innerHTML : text,html 모두 가능
+                //msg.innerText=text="<u>"+text+"</u>";//확인 u가 그대로 나온다
+                msg.innerHTML=text="<u>"+text+"</u>";//u가 밑줄로 인식
+            }  
+        </script>
+    </body>
+</html>

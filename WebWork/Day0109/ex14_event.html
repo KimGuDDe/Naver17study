@@ -26,5 +26,70 @@
         <img src="../Photo/11.jpg" style="width: 150px;border: solid 5px orange;"
         onmouseenter="this.style.bordercolor='green'"
         onmouseleave="this.style.bordercolor='orange'">
+        <br><br>
+        <button type="button" class="btn btn-success btn-sm"
+        onclick="alert('this.type')">데이터 추가</button>
+        &nbsp;&nbsp;
+        <input type="button" value="데이터삭제" class="btn btn-danger btn-sm"
+        onclick="alert(this.value)">
+
+        <input type="button" value="데이터수정" class="btn btn-info btn-sm"
+        onclick="Hello('안녕')">
+
+        <script>
+            function Hello(msg)
+            {
+                alert("당신의 메세지는 ["+msg+"]입니까?");
+            }
+        </script>
+
+        <input type="button" value="기본버튼"
+        onclick="change(this)">
+
+        <script>
+            function change(inputButton)
+            {
+                inputButton.style.backgroundcolor='orange';
+                inputButton.style.color='blue';
+            }
+        </script>
+
+        <input type="button" value="수학계산"
+        onclick="add(5,7)"> <!--alert 으로 5+7은 12입니다 라고 출력하는 add함수수-->
+
+        <script>
+            function add(su1,su2)
+                {
+                        console.log(typeof(su1));
+                        console.log(typeof(su2));
+                //    alert(su1+"+"+su2+"는"+(su1+su2)+"입니다")
+                        alert(`${su1} + ${su2} 는 ${su1-su2} 입니다`)
+                }
+            
+        </script>
+        <hr>
+        <script>
+            for(var i=1;i<=10;i++)
+            {
+                document.write(`<b>${1}</b>&nbsp;`);
+            }
+        </script>
+        <br>
+        <script>
+            for(var i=0;i<9;i++)
+            {
+                document.write(`<img src="../number/${i}.gif">`);
+            }
+        </script>
+        <h4 class="alert alert-danger">mycar도 width=100 으로 모두 출력</h4>
+        <script>
+            for(var i=1;i<15;i++)
+            {
+                var s=`<img src="../Mycar/mycar${i}.png" width=100 height=70 style="border:solid 3px green,
+                margin:3px">`;
+                document.write(s);
+            }
+        </script>
+        
     </body>
 </html>
