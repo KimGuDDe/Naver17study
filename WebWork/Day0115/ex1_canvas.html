@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // canvas 는 그림을 그리기 위한 기능
+        // HTML5에 추가된 기능
+        // 캔바스 이용으로 그림판 또는 간단한 게임 제작 가능능
+        window.onload=function(){
+            let canvas=document.getElementById("can");
+            let ctx=canvas.getContext("2d");
+
+            //선 그리기
+            ctx.lineWidth=3; // 선 굵기
+            ctx.strokeStyle="green"; //선색상 
+            ctx.beginPath(); //선 그리기 시작
+            ctx.moveTo(150,50); //시작위치로 이동
+            ctx.lineTO(50,150); //선을그린다
+            ctx.lineTO(250,150); 
+            ctx.lineTO(150,50);
+            ctx.stroke(); //실제 좌표대로 선을 그려준다
+            ctx.closePath(); //선 그리기 끝
+
+            //사각형
+            ctx.strokeStyle="hotpink";
+            ctx.lineWidth=5;
+            ctx.strokeRect(10,160,100,100); //x,y,w,h 선만 있는 사각형
+
+            //채워진 사각형
+            ctx.fillStyle="rgba(185,208,170,0.5)";
+            ctx.fillRect(200,10,100,100); 
+
+            //그래픽글자-그림자
+            ctx.shadowOffsetX=5;
+            ctx.shadowOffsetY=5;
+            ctx.shadowBlur=10;
+            ctx.shadowColor="orange";
+
+            ctx.fillStyle="red";
+            ctx.font="30px Comic Sans Ms";
+            ctx.fillText("Have a Good Time!!",10,350);
+
+            //이미지 나타내는 방법
+            let image=new Image();
+            image.src="../Mycar/mycar13.png";
+
+            image.onload=function(){
+                
+                //사이즈조절 x,y,w,h
+                ctx.drawImage(image,300,100,150,150);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3 class="alert alert-danger">HTML5의 Canvas 기능</h3>
+    <canvas id="can" style="border: 1px solid black;"
+    width="700" height="400"></canvas>
+</body>
+</html>
