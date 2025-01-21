@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gaegu&family=Jua&family=Nanum+Pen+Script&family=Playwrite+AU+SA:wght@100..400&family=Single+Day&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <style>
+            body * {
+                font-family: 'Jua';
+            }
+            
+            div.mytooltip{
+                position: absolute;
+                line-height: 1.5;
+                color: black;
+                width: 200px;
+                background-color: #f90;
+                border: 2px solid white;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 30px;
+                opacity: 0.8;
+                display: none;
+            }
+        </style>
+        <script>
+            $(function(){
+                $("a").bind({
+                    mousemove:function(e){
+                        $("div.mytooltip").css({
+                            "left":e.pageX+"px",
+                            "top":e.pageY+"px"
+                        });
+                    },
+                    mouseover:function(e){
+                        $("div.mytooltip").fadeIn('fast');
+
+                        $("div.mytooltip").html(`
+                        Java<br>HTML5<br>SpringBoot<br> MySQL`)
+                        .css("background-color","#f90");
+                    },
+                    mouseout:function(e){
+                        $("div.mytooltip").fadeOut('fast');
+                    },
+                });
+
+                $("b.view").bind({
+                    mousemove:function(e){
+                        $("div.mytooltip").css({
+                            "left":e.pageX+"px",
+                            "top":e.pageY+"px"
+                        });
+                    },
+                    mouseover:function(e){
+                        let text=$(this).text();
+                        let color=$(this).attr("color");
+                        $("div.mytooltip").text(text).css("background-color",color);
+                        $("div.mytooltip").fadeIn('slow');
+                    },
+                    mouseout:function(e){
+
+                    },
+                });
+
+                $("ol.today li").bind({
+                    mousemove:function(e){
+                        $("div.mytooltip").css({
+                            "left":e.pageX+"px",
+                            "top":e.pageY+"px"
+                        });
+                    },
+                    mouseover:function(e){
+                        let img=$(this).text();
+                        let photo=$(this).attr("photo");
+                        // $("ol.today li").img(img).css("background-color",color);
+                        // $("ol.today li").fadeIn('slow');
+                        $("div.mytooltip").html(`
+                        <h6>${img}</h6>
+                        <img src="${photo}" width=100 border="1">`).show();
+                    },
+                    mouseout:function(e){
+
+                    },
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="mytooltip">
+            Java<br>
+            HTML5<br>
+            SpirngBoot<br>
+            MySQL
+        </div>
+
+        <a style="font-size: 25px;cursor: pointer;">
+            ‘트럼프 밈코인’ 발행 소식에...솔라나 17% ‘급등’
+        </a>
+        <hr>
+        <pre style="font-size: 15px;">
+            ‘트럼프 2기’ 행정부 출범을 앞두고 가상화폐 솔라나가 폭등했다.
+
+            19일(한국시간) 오후 5시 15분 현재 글로벌 코인 시황 중계사이트인
+            코인마켓캡에서 솔라나는 24시간 전보다 16.97% 오른 273달러에 거래되고 있다.
+            <b class="view" color="orange">솔라나</b>가격은 트럼프 당선인이 밈(meme)코인을 발행했다는 소식 이후 상승하기
+            시작했다. 밈코인은 인터넷 밈에서 유래했거나 재미를 목적으로 만들어진
+            가상자산으로 실질적인 기능이 없는 코인이다.
+            앞서 <b class="view" color="yellow">트럼프</b>당선인은 지난 17일(현지시간) 자신의 사회관계망서비스(SNS) 계정을
+            통해 “유일한 공식 트럼프 밈”이라며 새로운 밈코인
+            ‘오피셜 트럼프’(Official Trump)를 출시했다고 밝혔다.
+        </pre>
+        <hr>
+        <ol class="today">
+            <li photo="../food/1.jpg">에그샌드위치</li>
+            <li photo="../food/11.jpg">망고빙수</li>
+            <li photo="../food/2.jpg">닭꼬치</li>
+            <li photo="../mycar/mycar13.png">핑크자동차</li>
+            <li photo="../mycar/mycar11.png">노랑자동차</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gaegu&family=Jua&family=Nanum+Pen+Script&family=Playwrite+AU+SA:wght@100..400&family=Single+Day&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <style>
+            body * {
+                font-family: 'Jua';
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="myCanvas" width="700" height="400" style="border:1px solid black;"></canvas>
+        <br>
+        <button id="deleteButton" class="btn btn-danger" style="border: 2px solid black; margin-left: 40px; border-radius: 5px;">
+            <i class="bi bi-pencil-fill"></i>선택한 사진 삭제하기
+        </button>
+
+        <script>
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+            const images = [];
+
+            let pict = [
+                {"img":"../photo2/1.jpg","title":"1"},
+                {"img":"../photo2/2.jpg","title":"2"},
+                {"img":"../photo2/3.jpg","title":"3"},
+                {"img":"../photo2/4.jpg","title":"4"},
+                {"img":"../photo2/5.jpg","title":"5"},
+                {"img":"../photo2/6.jpg","title":"6"},
+                {"img":"../photo2/7.jpg","title":"7"},
+                {"img":"../photo2/8.jpg","title":"8"},
+                {"img":"../photo2/9.jpg","title":"9"},
+                {"img":"../photo2/10.jpg","title":"10"},
+            ];
+
+            function loadImages() {
+                pict.forEach((item, index) => {
+                    const img = new Image();
+                    img.src = item.img;
+                    img.onload = () => {
+                        images.push({img: img, title: item.title, x: (index % 5) * 140, y: Math.floor(index / 5) * 140});
+                        drawImages();
+                    };
+                });
+            }
+
+            function drawImages() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                images.forEach(item => {
+                    ctx.drawImage(item.img, item.x, item.y, 100, 100);
+                    ctx.fillText(item.title, item.x + 50, item.y + 120);
+                });
+            }
+
+            canvas.addEventListener('click', (event) => {
+                const rect = canvas.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                images.forEach((item, index) => {
+                    if (x > item.x && x < item.x + 100 && y > item.y && y < item.y + 100) {
+                        images.splice(index, 1);
+                        drawImages();
+                    }
+                });
+            });
+
+            loadImages();
+        </script>
+    </body>
+</html>
