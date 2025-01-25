@@ -15,5 +15,5 @@
 			alert("암호가 안 맞아요");
 			history.back();
 		</script>
-	<%} %>
+	<%}
 %>
