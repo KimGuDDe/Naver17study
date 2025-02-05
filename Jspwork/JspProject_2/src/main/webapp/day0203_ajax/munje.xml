@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<guest name="이미자">
+	<avata>../image/photo2/3.jpg</avata>
+	<messeage>안녕하세요</messeage>
+	<birthday>2001-12-20</birthday>	
+	</guest>
+	<guest name="장원영">
+	<avata>../image/photo2/4.jpg</avata>
+	<messeage>안녕하세요!</messeage>
+	<birthday>2001-11-20</birthday>	
+	</guest>
+	<guest name="안유진">
+	<avata>../image/photo2/5.jpg</avata>
+	<messeage>안녕하세요@@</messeage>
+	<birthday>2000-09-20</birthday>	
+	</guest>
+	<guest name="팜하늬">
+	<avata>../image/photo2/6.jpg</avata>
+	<messeage>강해릔</messeage>
+	<birthday>1999-10-20</birthday>	
+	</guest>
+</data>

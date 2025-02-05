@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Vector;
 
-import com.mysql.cj.conf.ConnectionPropertiesTransform;
+import com.mysql.cj.jdbc.Driver;
 
 import db.connect.MysqlConnect;
 

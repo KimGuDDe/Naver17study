@@ -1,0 +1,10 @@
+[
+	{"name":"김말자","score":[98,89,100],"age":"23세",
+	"photo":"../image/photo/11.jpg"},
+	{"name":"이상순","score":[90,80],"age":"34세"
+	, "photo":"../image/photo/3.jpg"},
+	{"name":"이민정","score":[90,70,60],"age":"35세"
+	, "photo":"../image/photo/10.jpg"},
+	{"name":"이수민","score":[90,75,65],"age":"25세"
+	, "photo":"../image/photo/9.jpg"}
+]
