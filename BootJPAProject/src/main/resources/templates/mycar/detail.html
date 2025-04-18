@@ -20,7 +20,72 @@
        	border: 1px solid black;
        	display: inline-block;
        }
+       
+       .day{
+       	color:#ccc;
+       	font-size: 0.9em;
+       	margin-left: 20px;
+       }
+       
+       .commentdel{
+       	color:red;
+       	cursor: pointer;
+       	margin-left: 10px;
+       	font-size: 14px;
+       }
 </style>
+<script type="text/javascript">
+	$(function(){
+		comment_list();
+		
+		$(document).on("click",".commentdel",function(){
+			let idx=$(this).attr("idx");
+			
+			let a=confirm("해당 댓글을 삭제할까요?");
+			if(!a)
+				return;
+			
+			$.ajax({
+				type:"delete",
+				dataType:"text",
+				url:"./commentdel",
+				data:{"idx":idx},
+				success:function(){
+					comment_list();
+				}
+			});
+		});
+	});
+	
+	function comment_list()
+	{
+		let num=[[${dto.num}]];
+		
+		$.ajax({
+			type:"get",
+			dataType:"json",
+			url:"./commentlist",
+			data:{"num":num},
+			success:function(res){
+				//alert(res.length);
+				$(".commentcnt").text(res.length);
+				let s="";
+				$.each(res,function(i,ele){
+					s+=
+					`
+						<div style="margin-left:20px;">
+							[${ele.nickname}] &nbsp;
+							${ele.comment}
+							<span class="day">${ele.writeday}</span>
+							<i class="bi bi-x commentdel" idx="{ele.idx}]"></i>
+						</div>
+					`;
+				});
+				$(".commentlist").next().html(s);
+			}
+		});
+	}
+</script>
 </head>
 <body>
 <div style="margin: 20px; width: 600px;">
@@ -32,6 +97,42 @@
 	<h6>구 입 일 : [[${dto.carguip}]]</h6>
 	<h6>등 록 일 : <span th:text="${#calendars.format(dto.writeday,'yyyy-MM-dd HH:MM')}"></span> </h6>
 </div>
+<br>
+<br>
+<hr>
+<h6 class="commentlist">댓글 목록(총 <span class="commentcnt"></span>개)</h6>
+<div>
+
+</div>
+<br>
+<div class="input-group" style="width: 600px;">
+	<input type="text" id="nickname" class="form-control" placeholder="닉네임" style="width: 100px;">
+	<input type="text" id="comment" class="form-control" placeholder="댓글 입력" style="width: 400px;"> 
+	<button type="button" class="btn btn-sm btn-danger" id="btnaddcomment">추가</button>
+</div>
+<script type="text/javascript">
+	$("#btnaddcomment").click(function(){
+		let num=[[${dto.num}]];
+		let nickname=$("#nickname").val();
+		let comment=$("#comment").val();
+		if(nickname==''|| comment==''){
+			alert("닉네임과 댓글을 입력해주세요")
+			return;
+		}
+		
+		$.ajax({
+			type:"post",
+			dataType:"text",
+			url:"./addcomment",
+			data:{"num":num,"nickname":nickname,"comment":comment},
+			success:function(){
+				//comment_list();
+				$("#nickname").val("");
+				$("#comment").val("");
+			}
+		});
+	});
+</script>
 <br>
 <br>
 <div style="margin: 20px; width: 600px;">

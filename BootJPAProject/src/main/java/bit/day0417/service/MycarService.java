@@ -2,6 +2,8 @@ package bit.day0417.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import bit.day0417.data.MycarDto;
@@ -42,5 +44,20 @@ public class MycarService {
 	public void deleteCar(Long num)
 	{
 		mycarDao.deleteCar(num);
+	}
+	
+	public Page<MycarDto> getAllPageCars(Pageable pageable)
+	{
+		return mycarDao.getAllPageCars(pageable);
+	}
+	
+	public List<MycarDto> getSearchList(String search)
+	{
+		return mycarDao.getSearchList(search);
+	}
+	
+	public List<MycarDto> findByCarnameContaining(String search)
+	{
+		return mycarDao.findByCarnameContaining(search);
 	}
 }
