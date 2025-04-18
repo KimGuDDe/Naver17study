@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잔디깎이</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #2DB400;
+    color: #fff;
+    padding: 15px;
+}
+
+.header .logo h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+    padding: 20px;
+}
+
+/* 공문 섹션 스타일 */
+.public-documents {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.document-list li {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.document-list li:last-child {
+    border-bottom: none;
+}
+
+/* 게시판 섹션 스타일 */
+.board-section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.board-list li:last-child {
+    border-bottom: none;
+}
+
+/* 오늘의 식단 섹션 스타일 */
+.today-menu {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.menu-table th {
+    text-align: left;
+}
+
+/* 바로가기 메뉴 스타일 */
+.quick-links .links-grid {
+    display: flex;
+}
+
+.link-button {
+    background-color: #2DB400;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.footer{
+    text-align: center;
+    background-color: #2DB400;
+    height: 50px;
+}
+
+</style>
+<body>
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <div class="logo">
+            <h1>잔디깎이 협업툴</h1>            
+        </div>
+        <br><br>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">메인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">공문</a></li>
+                <li><a href="#">채팅</a></li>
+                <li><a href="#">부서</a></li>                
+            </ul>
+        </nav>        
+    </header>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="main-content">
+        <section class="quick-links">
+            <h2>바로가기 메뉴</h2>
+            <div class="links-grid">
+                <!-- 바로가기 버튼 -->
+                <button class="link-button">ERP 시스템</button>
+                &nbsp;&nbsp;
+                <button class="link-button">HR 관리</button>
+                &nbsp;&nbsp;
+                <button class="link-button">R&D 자료실</button>
+            </div>
+        </section>
+        <br><br>
+        <!-- 공문 섹션 -->
+        <section class="public-documents">
+            <h2>공문 목록</h2>
+            <ul class="document-list">
+                <!-- 동적으로 공문 목록을 추가할 수 있습니다 -->
+                <li>
+                    <h3>공문 제목: 회의 일정 안내</h3>
+                    <p>작성자: 홍길동 | 작성일: 2025-03-18</p>
+                    <p>내용: 2025년 3월 20일 오전 10시에 진행될 회의에 대한 안내입니다.</p>
+                </li>
+                <li>
+                    <h3>공문 제목: 부서별 업무 보고 요청</h3>
+                    <p>작성자: 김영희 | 작성일: 2025-03-17</p>
+                    <p>내용: 각 부서별로 업무 보고서를 작성하여 제출 바랍니다.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 게시판 섹션 -->
+        <section class="board-section">
+            <h2>게시판</h2>
+            <ul class="board-list">
+                <!-- 동적으로 게시글 목록을 추가할 수 있습니다 -->
+                <li><strong>[공지]</strong> 회사 행사 안내 - 2025-03-18</li>
+                <li><strong>[업무]</strong> 프로젝트 진행 상황 보고 - 2025-03-17</li>
+            </ul>
+        </section>
+
+        <!-- 오늘의 식단 섹션 -->
+        <section class="today-menu">
+            <h2>오늘의 식단</h2>
+            <table class="menu-table">
+                <tr><th>아침</th><td>샌드위치, 커피</td></tr>
+                <tr><th>점심</th><td>된장찌개, 생선구이, 밥</td></tr>
+                <tr><th>저녁</th><td>비빔밥, 계란국</td></tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer class="footer">
+        Copyright &copy; 그룹웨어 시스템. All Rights Reserved.
+    </footer>   
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js">
+    // 예시: 게시판 목록을 동적으로 추가하는 함수
+    function addBoardItem(title, content) {
+    const boardList = document.getElementById('board-list');
+    const item = document.createElement('li');
+    item.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+    boardList.appendChild(item);
+    }
+
+    // 예시: 기안문 목록을 동적으로 추가하는 함수
+    function addDraftItem(title, content) {
+    const draftsList = document.getElementById('drafts-list');
+    const item = document.createElement('li');
+    item.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+    draftsList.appendChild(item);
+    }        
+    </script>
+</body>
+</html>
