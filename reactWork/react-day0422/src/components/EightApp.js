@@ -7,8 +7,7 @@ const EightApp = () => {
     const cars=['1번차','2번차','3번차','4번차','5번차','6번차','7번차','8번차','9번차','10번차','11번차','12번차','13번차','14번차','15번차']
 
     // 방법 1
-    const nameList = names.map((erum,idx)=><h5 key={idx}>{idx}:{erum}</h5>)
-    const carList = cars.map((carName,idx)=><h5 key={idx}>{idx}:{carName}</h5>)
+    const nameList = names.map((erum,idx)=><h5 key={idx}>{idx}:{erum}</h5>)    
     const numbers = Array.from({ length: 10 }, (_, i) => i + 1);
 
     return (
